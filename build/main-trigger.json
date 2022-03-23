@@ -1,0 +1,16 @@
+{
+  "name": "ahmad-main",
+  "description": "Trigger canary build/deploy for any commit to the main branch",
+
+  "filename": "build/main-cloudbuild.yaml",
+  "triggerTemplate": {
+    "projectId": "devops-analiza",
+    "repoName": "ahmad-react-repo",
+    "branchName": "main"
+  },
+   "substitutions": {
+    "_ZONE": "europe-west2-b",
+    "_CLUSTER": "gke-progression-ahmad-cluster"
+  }
+
+}

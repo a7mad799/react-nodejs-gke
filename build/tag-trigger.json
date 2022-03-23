@@ -1,0 +1,16 @@
+{
+  "name": "tag",
+  "description": "Migrate from canary to prod triggered by creation of any tag",
+  "filename": "build/tag-cloudbuild.yaml",
+  
+  "triggerTemplate": {
+    "projectId": "devops-analiza",
+    "repoName": "ahmad-react-repo",
+    "tagName": ".*"
+  },
+  "substitutions": {
+    "_ZONE": "europe-west2-b",
+    "_CLUSTER": "gke-progression-ahmad-cluster"
+  }
+
+}
