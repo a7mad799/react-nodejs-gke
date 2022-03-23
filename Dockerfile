@@ -11,5 +11,7 @@ RUN cd api && npm install
 COPY api/server.js ./api/
 
 EXPOSE 3080
+EXPOSE 80
+EXPOSE 443
 
 CMD ["node", "./api/server.js"]
