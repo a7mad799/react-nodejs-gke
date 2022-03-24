@@ -22,7 +22,7 @@ steps:
     args: 
       - '-c'
       - |
-          docker build -t gcr.io/devops-analiza/ahmadapp:${SHORT_SHA}
+          docker build -t gcr.io/devops-analiza/ahmadapp:${SHORT_SHA} ./
 
 ### Test
 
