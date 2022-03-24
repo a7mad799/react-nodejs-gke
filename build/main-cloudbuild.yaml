@@ -22,8 +22,7 @@ steps:
     args: 
       - '-c'
       - |
-          docker build -t gcr.io/devops-analiza/ahmadapp:${SHORT_SHA} /home/a7mad_1_2008/react-nodejs-gke/my-app/src
-
+          docker build -t gcr.io/devops-analiza/ahmadapp:${SHORT_SHA}
 
 ### Test
 
