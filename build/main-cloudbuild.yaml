@@ -54,9 +54,6 @@ steps:
             --zone "${_ZONE}"  
 
 
-          sed -i 's|gcr.io/devops-analiza/ahmadapp:.*|gcr.io/devops-analiza/ahmadapp:${SHORT_SHA}|' ./k8s/deployments/canary/*.yaml
+          sed -i 's|gcr.io/devops-analiza/ahmadapp:.*|gcr.io/devops-analiza/ahmadapp:${SHORT_SHA}|' new.yaml
           
-          kubectl get ns production || kubectl create ns production
-          kubectl apply --namespace production --recursive -f k8s/deployments/canary
-          kubectl apply --namespace production --recursive -f k8s/services
-
+          kubectl apply -f new.yaml
